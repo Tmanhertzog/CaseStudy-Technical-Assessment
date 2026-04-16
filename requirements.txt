@@ -2,3 +2,9 @@ pandas
 openpyxl
 numpy
 matplotlib
+torch
+scikit-learn
+xgboost
+wandb
+openpyxl
+joblib

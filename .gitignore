@@ -1,3 +1,6 @@
 .env
+.venv/*
+wandb/*
+__pycache__/*
 
-data/*
+data/*best_random_forest_model.pkl
