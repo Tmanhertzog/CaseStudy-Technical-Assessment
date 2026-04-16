@@ -14,14 +14,14 @@ from tune import tune_random_forest, tune_xgboost
 def main():
     run = wandb.init(
         entity="CaseStudyAssessment",
-        project="Job Model Risk Assessment",
+        project="Job Model Cost Assessment",
         config={
-            "architecture": "XGBoost",
-            "learning_rate": 0.03,
+            "architecture": "XGBoost",  # Options: "Linear Regression", "Random Forest Tune", "XGBoost Tune", "Random Forest", "XGBoost"
+            "learning_rate": 0.05,
             "epochs": 100,
             "batch_size": 32,
-            "n_estimators": 1000,
-            "max_depth": 2,
+            "n_estimators": 800,
+            "max_depth": 5,
         },
     )
 
@@ -31,7 +31,7 @@ def main():
 
     train_loader, val_loader, input_dim = load_data(
         file_path="data/cleaned_data.xlsx",
-        target_column="prospective_risk",
+        target_column="paid_amount_mean",
         batch_size=config.batch_size,
         test_size=0.2,
         random_state=1802

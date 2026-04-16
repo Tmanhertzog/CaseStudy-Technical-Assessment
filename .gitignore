@@ -3,4 +3,4 @@
 wandb/*
 __pycache__/*
 
-data/*best_random_forest_model.pkl
+data/*
