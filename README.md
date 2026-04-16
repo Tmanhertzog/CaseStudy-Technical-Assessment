@@ -44,6 +44,36 @@ Since models like XGBoost and decision trees work best on tabular data I decided
 
 ---
 
+## Model Evaluation
+
+To evaluate my models I used RMSE and a normalized version which was (RMSE / mean). This way I could determine the model's typical error compared to the average value of what I was predicting
+
+#### Cost targeted model
+- Logistic Regression
+  - RMSE: 114.49
+  - RMSE / Mean: 1.13
+- Random Forest
+  - RMSE: 94.72
+  - RMSE / Mean: 0.93
+- XGBoost
+  - RMSE: 94.26
+  - RMSE / Mean: 0.92
+
+#### Risk targeted model
+- Logistic Regression
+  - RMSE: 117.42
+  - RMSE / Mean: 0.84
+- Random Forest
+  - RMSE: 112.78
+  - RMSE / Mean: 0.81
+- XGBoost
+  - RMSE: 109.06
+  - RMSE / Mean: 0.78
+
+---
+
+
+
 ## Training
 
 - PyTorch training loop for linear regression  
@@ -129,7 +159,7 @@ Modify settings in `run.py`:
 
 - Improve model performance
 - Look to reformat data and implement temporal models such as an RNN
-- 
+- Improve methods for feature extraction
 
 ---
 
